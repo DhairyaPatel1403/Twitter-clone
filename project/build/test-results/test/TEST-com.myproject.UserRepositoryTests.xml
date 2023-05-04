@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.myproject.UserRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-10T16:23:30" hostname="DESKTOP-A8M2Q89" time="0.813">
+  <properties/>
+  <testcase name="testDelete()" classname="com.myproject.UserRepositoryTests" time="0.813"/>
+  <system-out><![CDATA[21:53:22.968 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [UserRepositoryTests]: using SpringBootContextLoader
+21:53:22.988 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.myproject.UserRepositoryTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:53:22.992 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.myproject.UserRepositoryTests]: UserRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:53:23.138 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper -- Using ContextCustomizers for test class [UserRepositoryTests]: [DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer]
+21:53:23.335 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [C:\Users\Dhairya\IdeaProjects\project\build\classes\java\main\com\myproject\ProjectApplication.class]
+21:53:23.339 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.myproject.ProjectApplication for test class com.myproject.UserRepositoryTests
+21:53:23.413 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper -- Using TestExecutionListeners for test class [UserRepositoryTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+21:53:23.418 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [UserRepositoryTests], class annotated with @DirtiesContext [false] with mode [null]
+21:53:23.453 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener -- Performing dependency injection for test class com.myproject.UserRepositoryTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-04-10T21:53:24.466+05:30  INFO 5300 --- [    Test worker] com.myproject.UserRepositoryTests        : Starting UserRepositoryTests using Java 19.0.2 with PID 5300 (started by Dhairya in C:\Users\Dhairya\IdeaProjects\project)
+2023-04-10T21:53:24.470+05:30  INFO 5300 --- [    Test worker] com.myproject.UserRepositoryTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-10T21:53:25.334+05:30  INFO 5300 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-10T21:53:25.472+05:30  INFO 5300 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interfaces.
+2023-04-10T21:53:26.585+05:30  INFO 5300 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-10T21:53:26.843+05:30  INFO 5300 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-10T21:53:27.685+05:30  INFO 5300 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-10T21:53:28.110+05:30  INFO 5300 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@584ca390
+2023-04-10T21:53:28.118+05:30  INFO 5300 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-10T21:53:28.272+05:30  WARN 5300 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-04-10T21:53:28.283+05:30  INFO 5300 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-10T21:53:30.130+05:30  INFO 5300 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-10T21:53:30.153+05:30  INFO 5300 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-10T21:53:30.915+05:30  INFO 5300 --- [    Test worker] com.myproject.UserRepositoryTests        : Started UserRepositoryTests in 7.332 seconds (process running for 11.213)
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password from users u1_0 where u1_0.id=?
+Hibernate: delete from users where id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Twitter</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<h2 class="text-center">Login</h2>
+
+<div th:if="${session.message}" th:classappend="${session.message}" class="alert alert-success" roles="alert">
+    <p th:text="${session.message}"></p>
+    <th:block th:text="${session.removeAttribute('message')}"></th:block>
+
+</div>
+
+
+<form class="card p-3 container my-5" th:action="@{/home}" method="post">
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input name="email" class="form-control" id="email" aria-describedby="emailHelp">
+    </div>
+
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input name="password" type="password" class="form-control" id="password">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary my-4">Submit</button>
+</form>
+
+
+</body>
+</html>
